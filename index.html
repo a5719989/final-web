@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>期末作業</title>
+    <style>
+        li {
+            display: block;
+            height: 50px;
+            font-family: 華康儷粗圓;
+            font-size: 25px;
+        }
+
+        a:link {
+            color: #A0522D;
+        }
+
+        a:visited {
+            color: #A0522D;
+        }
+
+        a:hover {
+            color: #00AA88;
+        }
+    </style>
+    <script type="text/javascript">
+        var dirTop = 0;
+        var dirLeft = 0;
+        var fontSize = 15;
+        var myVar;
+
+        function timerStart() {
+            myVar = setInterval(myTimer,200);
+        }
+
+        function timerStop() {
+            clearInterval(myVar);
+        }
+
+        function myTimer() {
+            var d = new Date();
+            document.getElementById("title1").innerHTML = d.toLocaleTimeString();
+
+            dirTop += 10;
+            if (dirTop >500) dirTop = 0;
+            document.getElementById("title1").style.marginTop = dirTop.toString() + "px";
+        }
+    </script>
+</head>
+<body style="background-image:url(1.jpg)">
+    <marquee style="background-color:white;font-size:30px;font-family:華康儷粗圓;color:#007799;">歡迎來到陳逸涵的首頁~~~</marquee>    
+    <div style="float: left; width:200px; margin-bottom: 200px; margin-top: 10px;">
+        <ul style="padding: 5px 10px 10px 10px; margin: 0;list-style-type:none;">
+            <li>
+                <a href="index.html">首頁</a>
+            </li>
+            <li>
+                <a href="game.html">推薦遊戲</a>
+            </li>
+            <li>
+                <a href="video.html">推薦影片</a>
+            </li>
+            <li>
+                <a href="food.html">推薦美食</a>
+            </li>
+            <li>
+                <a href="class.html">我的課表</a>
+            </li>
+            <li>
+                <a href="opinion.html">給我的意見</a>
+            </li>
+        </ul>
+    </div>
+    <div style="margin-top:10px;margin-bottom:10px;margin-left:200px;float:left;">
+        <img src="2.jpg" style="width:200px;border:2px solid black;">
+        <h1 style="font-size:40px;">
+            <a href="https://tw.news.yahoo.com/%E5%B7%B4%E8%A5%BF%E9%87%8C%E7%B4%84%E7%9C%81%E5%BF%AB%E7%A0%B4%E7%94%A2-%E5%AE%A3%E4%BD%88%E8%B2%A1%E6%94%BF%E7%B7%8A%E6%80%A5%E7%8B%80%E6%85%8B-230305057.html">巴西里約省快破產 宣佈財政緊急狀態</a>
+        </h1>
+        <p>
+            距離奧運揭幕只剩不到五十天，主辦城市「里約熱內盧」所在的里約省政府，
+            <br />宣告它們的財政快要破產，省長說，嚴重的經濟危機，恐怕會迫使它們對奧運賽的一些承諾跳票。......
+        </p>
+        <img src="3.jpg" style="width:200px;border:2px solid black;" />
+        <h2 style="font-size:40px;">
+            <a href="https://tw.news.yahoo.com/%E7%8B%99%E6%AE%BA%E8%8B%B1%E8%AD%B0%E5%93%A1%E5%AD%A4%E7%8B%BC%E5%87%B6%E5%AB%8C-%E6%96%B0%E7%B4%8D%E7%B2%B9%E7%8B%82%E5%BE%92-192600455.html">狙殺英議員孤狼凶嫌 新納粹狂徒</a>
+        </h2>
+        <p>
+            當街狙殺英國女議員考克斯的孤狼凶嫌梅爾（Thomas Mair）有精神病史，是白人至上主義者，
+            <br />與極右派團體關係匪淺，甚至曾向美國新納粹組織訂購教導製作爆裂物及手槍的手冊。......
+        </p>
+    </div>
+   
+
+        <h1 id="title1" style="margin-top:10px;margin-bottom:10px;margin-left:50px;float:left;">時間</h1>
+        <div style="margin-top:10px;margin-bottom:10px;margin-left:10px;float:left;">
+            <input id="input1" onclick="javascript: timerStart();" type="button" value="Start" />
+            <input id="input2" onclick="javascript: timerStop();" type="button" value="Stop" />
+        </div>
+   
+
+</body>
+</html>
